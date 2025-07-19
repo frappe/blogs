@@ -4,7 +4,7 @@
 from math import ceil
 
 import frappe
-from frappe import _
+from frappe import _,scrub
 from frappe.utils import (
 	cint,
 	get_fullname,
@@ -394,3 +394,32 @@ def get_blog_list(doctype, txt=None, filters=None, limit_start=0, limit_page_len
 			post.avatar = "/" + post.avatar
 
 	return posts
+
+def send_email(doc,method):
+	if doc.reference_doctype != "Blog Post":
+		return
+
+	if doc.reference_name:
+		blog = frappe.get_doc(doc.reference_doctype, doc.reference_name)
+
+		if blog.get("route"):
+			url = f"{frappe.utils.get_request_site_address()}/{blog.route}#{blog.name}"
+		else:
+			url = f"{frappe.utils.get_request_site_address()}/app/{scrub(blog.doctype)}/{blog.name}#comment-{doc.name}"
+
+
+		content = (
+			doc.content
+			+ "<p><a href='{}' style='font-size: 80%'>{}</a></p>".format(url, _("View Comment"))
+		)
+
+		if blog.enable_email_notification:
+			creator_email = frappe.db.get_value("User", blog.owner, "email") or blog.owner
+			subject = _("New Comment on {0}: {1}").format(blog.doctype, blog.get_title())
+			frappe.sendmail(
+				recipients=creator_email,
+				subject=subject,
+				message=content,
+				reference_doctype=doc.doctype,
+				reference_name=doc.name,
+			)
