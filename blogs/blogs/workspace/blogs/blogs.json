@@ -1,0 +1,71 @@
+{
+ "app": "blogs",
+ "charts": [],
+ "content": "[{\"id\":\"z0p-rE34AV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Blog Post\",\"col\":3}},{\"id\":\"Sz_VDXMrCY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Blog Category\",\"col\":3}},{\"id\":\"FBnmYl2D55\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Blogger\",\"col\":3}},{\"id\":\"vbkQ-E4tvB\",\"type\":\"paragraph\",\"data\":{\"text\":\"Create&nbsp;\",\"col\":12}},{\"id\":\"ZuQAq_pFUe\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create New Blog\",\"col\":3}},{\"id\":\"6rTZdWxzU9\",\"type\":\"paragraph\",\"data\":{\"text\":\"Recents\",\"col\":12}},{\"id\":\"4qIm1X3IPR\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Blog in this Month\",\"col\":4}}]",
+ "creation": "2025-07-19 17:16:23.490172",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "pen",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Blogs",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2025-07-19 17:29:39.335929",
+ "modified_by": "Administrator",
+ "module": "Blogs",
+ "name": "Blogs",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Blog Post",
+   "label": "Blog in this Month",
+   "quick_list_filter": "[[\"Blog Post\",\"creation\",\"Timespan\",\"this month\",false]]"
+  }
+ ],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Blog Post",
+   "link_to": "Blog Post",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Blogger",
+   "link_to": "Blogger",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Blog Category",
+   "link_to": "Blog Category",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Create New Blog",
+   "link_to": "Blog Post",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Blogs",
+ "type": "Workspace"
+}
