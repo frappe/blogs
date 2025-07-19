@@ -11,15 +11,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "blogs",
-# 		"logo": "/assets/blogs/logo.png",
-# 		"title": "Blogs",
-# 		"route": "/blogs",
-# 		"has_permission": "blogs.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "blogs",
+		"logo": "/assets/blogs/blogs.svg",
+		"title": "Blogs",
+		"route": "/blogs",
+		"has_permission": "blogs.check_app_permission"
+	}
+]
 
 # Includes in <head>
 # ------------------
