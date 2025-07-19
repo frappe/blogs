@@ -132,13 +132,7 @@ web_include_css = "/assets/blogs/css/blog.scss"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {"Comment": {"after_insert": "blogs.blogs.doctype.blog_post.blog_post.send_email"}}
 
 # Scheduled Tasks
 # ---------------
@@ -236,4 +230,8 @@ web_include_css = "/assets/blogs/css/blog.scss"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
+comment_rate_limit = "blogs.blogs.doctype.blog_settings.blog_settings.get_comment_limit"
+has_comment_permission = {
+	"doctype": "Blog Post",
+	"method": "blogs.blogs.doctype.blog_settings.blog_settings.has_comment_permission",
+}
