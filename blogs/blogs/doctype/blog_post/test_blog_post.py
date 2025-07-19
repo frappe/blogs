@@ -4,6 +4,7 @@ import re
 
 import frappe
 from bs4 import BeautifulSoup
+from frappe.core.doctype.communication.test_communication import create_email_account
 from frappe.custom.doctype.customize_form.customize_form import reset_customization
 from frappe.tests import IntegrationTestCase
 from frappe.utils import random_string, set_request
@@ -18,6 +19,7 @@ EXTRA_TEST_RECORD_DEPENDENCIES = ["Blog Post"]
 
 class TestBlogPost(IntegrationTestCase):
 	def setUp(self):
+		create_email_account()
 		reset_customization("Blog Post")
 
 	def tearDown(self):
