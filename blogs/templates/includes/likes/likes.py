@@ -4,8 +4,9 @@
 import frappe
 from frappe import _
 from frappe.rate_limiter import rate_limit
-from blogs.blogs.doctype.blog_settings.blog_settings import get_like_limit
 from frappe.website.utils import clear_cache
+
+from blogs.blogs.doctype.blog_settings.blog_settings import get_like_limit
 
 
 @frappe.whitelist(allow_guest=True)

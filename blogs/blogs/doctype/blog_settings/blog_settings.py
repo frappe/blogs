@@ -45,7 +45,8 @@ def get_like_limit():
 def get_comment_limit():
 	return frappe.get_single_value("Blog Settings", "comment_limit") or 5
 
+
 def has_comment_permission(ref_doctype):
-    return ref_doctype == "Blog Post" and frappe.db.get_single_value(
-			"Blog Settings", "allow_guest_to_comment"
-		)
+	return ref_doctype == "Blog Post" and frappe.db.get_single_value(
+		"Blog Settings", "allow_guest_to_comment"
+	)

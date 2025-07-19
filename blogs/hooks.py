@@ -132,11 +132,7 @@ web_include_css = "/assets/blogs/css/blog.scss"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-    "Comment":{
-        "after_insert": "blogs.blogs.doctype.blog_post.blog_post.send_email"
-    }
-}
+doc_events = {"Comment": {"after_insert": "blogs.blogs.doctype.blog_post.blog_post.send_email"}}
 
 # Scheduled Tasks
 # ---------------
@@ -236,7 +232,6 @@ doc_events = {
 # }
 comment_rate_limit = "blogs.blogs.doctype.blog_settings.blog_settings.get_comment_limit"
 has_comment_permission = {
-    "doctype": "Blog Post",
-    "method":"blogs.blogs.doctype.blog_settings.blog_settings.has_comment_permission"
+	"doctype": "Blog Post",
+	"method": "blogs.blogs.doctype.blog_settings.blog_settings.has_comment_permission",
 }
-
