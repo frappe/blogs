@@ -1,6 +1,8 @@
 __version__ = "0.0.1"
 import frappe
 from frappe.utils.modules import get_modules_from_all_apps_for_user
+
+
 def check_app_permission():
 	if frappe.session.user == "Administrator":
 		return True
@@ -11,9 +13,7 @@ def check_app_permission():
 		return False
 
 	roles = frappe.get_roles()
-	if any(
-		role in ["Blogger"] for role in roles
-	):
+	if any(role in ["Blogger"] for role in roles):
 		return True
 
 	return False

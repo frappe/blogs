@@ -16,8 +16,8 @@ add_to_apps_screen = [
 		"name": "blogs",
 		"logo": "/assets/blogs/blogs.svg",
 		"title": "Blogs",
-		"route": "/blogs",
-		"has_permission": "blogs.check_app_permission"
+		"route": "/app/blogs",
+		"has_permission": "blogs.check_app_permission",
 	}
 ]
 
