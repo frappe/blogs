@@ -235,3 +235,7 @@ has_comment_permission = {
 	"doctype": "Blog Post",
 	"method": "blogs.blogs.doctype.blog_settings.blog_settings.has_comment_permission",
 }
+
+website_route_rules = [
+	{"from_route": "/blog/<category>", "to_route": "Blog Post"},
+]
