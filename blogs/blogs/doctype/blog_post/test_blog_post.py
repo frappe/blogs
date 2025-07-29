@@ -159,7 +159,7 @@ class TestBlogPost(IntegrationTestCase):
 
 		frappe.db.delete("Comment", {"comment_type": "Like", "reference_doctype": "Blog Post"})
 
-		from frappe.templates.includes.likes.likes import like
+		from blogs.templates.includes.likes.likes import like
 
 		liked = like("Blog Post", test_blog.name, True)
 		self.assertEqual(liked, True)
