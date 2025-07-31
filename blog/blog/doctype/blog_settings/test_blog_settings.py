@@ -6,7 +6,7 @@ from frappe.templates.includes.comments.comments import add_comment
 from frappe.tests import IntegrationTestCase
 from frappe.tests.test_model_utils import set_user
 
-from blogs.blogs.doctype.blog_post.test_blog_post import make_test_blog
+from blog.blog.doctype.blog_post.test_blog_post import make_test_blog
 
 
 class TestBlogSettings(IntegrationTestCase):
