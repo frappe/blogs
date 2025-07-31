@@ -1,6 +1,6 @@
-### Blogs
+### Blog
 
-Write and publish blogs
+Write and publish blog
 
 ### Installation
 
@@ -9,7 +9,7 @@ You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 ```bash
 cd $PATH_TO_YOUR_BENCH
 bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app blogs
+bench install-app blog
 ```
 
 ### Contributing
@@ -17,7 +17,7 @@ bench install-app blogs
 This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
 
 ```bash
-cd apps/blogs
+cd apps/blog
 pre-commit install
 ```
 

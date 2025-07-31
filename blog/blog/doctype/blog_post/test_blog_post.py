@@ -12,7 +12,7 @@ from frappe.website.serve import get_response
 from frappe.website.utils import clear_website_cache
 from frappe.website.website_generator import WebsiteGenerator
 
-from blogs.blogs.doctype.blog_post.blog_post import get_blog_list
+from blog.blog.doctype.blog_post.blog_post import get_blog_list
 
 EXTRA_TEST_RECORD_DEPENDENCIES = ["Blog Post"]
 
@@ -159,7 +159,7 @@ class TestBlogPost(IntegrationTestCase):
 
 		frappe.db.delete("Comment", {"comment_type": "Like", "reference_doctype": "Blog Post"})
 
-		from blogs.templates.includes.likes.likes import like
+		from blog.templates.includes.likes.likes import like
 
 		liked = like("Blog Post", test_blog.name, True)
 		self.assertEqual(liked, True)

@@ -35,7 +35,7 @@ class Blogger(Document):
 	def on_update(self):
 		"if user is set, then update all older blogs"
 
-		from blogs.blogs.doctype.blog_post.blog_post import clear_blog_cache
+		from blog.blog.doctype.blog_post.blog_post import clear_blog_cache
 
 		clear_blog_cache()
 
